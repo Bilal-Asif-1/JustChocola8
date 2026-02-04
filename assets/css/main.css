@@ -4227,6 +4227,54 @@ textarea {
     display: none;
   }
 }
+/* About page experience section - design match */
+.about__experience-section {
+  gap: 20px 40px;
+}
+.about__experience-section .experience__box::before {
+  display: none;
+}
+.about__experience-divider {
+  width: 1px;
+  min-width: 1px;
+  height: 80px;
+  background: #E0E0E0;
+  flex-shrink: 0;
+}
+@media (max-width: 767.98px) {
+  .about__experience-divider {
+    width: 100%;
+    height: 1px;
+    min-height: 1px;
+  }
+}
+.experience__box--dark .experience__box-shape svg {
+  color: #1e3a5f;
+}
+.experience__box--dark .title {
+  color: var(--tg-color-white-default) !important;
+  font-size: 48px;
+  line-height: 0.9;
+  display: block;
+}
+.experience__box--dark .title span {
+  font-size: 24px;
+  font-weight: 600;
+}
+.experience__box--dark p {
+  color: var(--tg-color-white-default);
+  font-size: 16px;
+  margin-top: 4px;
+}
+.about__check-list .list-wrap li {
+  color: #1e3a5f;
+  font-weight: 600;
+  font-size: 17px;
+}
+.about__check-list .list-wrap li .icon {
+  background: var(--tg-theme-primary);
+  color: var(--tg-color-white-default);
+}
 .about__content-bottom {
   display: -webkit-box;
   display: -moz-box;
