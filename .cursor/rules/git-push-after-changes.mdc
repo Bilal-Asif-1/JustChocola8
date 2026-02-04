@@ -1,0 +1,17 @@
+---
+description: Push changes to remote after every request that modifies files
+alwaysApply: true
+---
+
+# Git Push After Changes
+
+After completing any request that results in file changes (edits, additions, deletions):
+
+1. Run `git add .` to stage all changes
+2. Run `git commit -m "descriptive message"` with a short message describing the changes
+3. Run `git push origin main` to push to the remote repository
+
+Remote: https://github.com/Bilal-Asif-1/JustChocola8.git  
+Branch: main
+
+Do this at the end of the same turn, before responding to the user.
