@@ -4115,7 +4115,7 @@ textarea {
   max-height: 580px;
   width: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center 40%;
 }
 @media (max-width: 1199.98px) {
   .about__img-four img:nth-child(1) {
@@ -9173,6 +9173,10 @@ textarea {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+/* Founder image - shift down to prevent face being cut off at top */
+img[src*="Screenshot_2026-02-06-02-28-53-757"] {
+  object-position: center 40%;
 }
 .team__item-img-shape .shape-one {
   position: absolute;
