@@ -38,7 +38,7 @@
 /*============================================
 /*  01. Theme Default CSS
 ==============================================*/
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&family=Dancing+Script:wght@400;500;600&family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 :root {
   --tg-body-font-family: 'Plus Jakarta Sans', sans-serif;
   --tg-heading-font-family: 'Baloo Bhaina 2', sans-serif;
@@ -1517,6 +1517,9 @@ textarea {
 .tg-header__area-three .logo__brand {
   color: #fff !important;
 }
+.tg-header__area-three .logo__by {
+  color: rgba(255,255,255,0.9) !important;
+}
 .tg-header__area-three .logo.text-center .logo__link {
   justify-content: center;
 }
@@ -1613,8 +1616,8 @@ textarea {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  gap: 10px;
+  align-items: baseline;
+  gap: 0;
   text-decoration: none;
 }
 /* Logo image hidden - justchocol8 text only in navbar */
@@ -1624,28 +1627,35 @@ textarea {
 .logo__brand {
   font-family: 'Fredoka', sans-serif;
   font-weight: 600;
-  font-size: 1.35rem;
+  font-size: 1.55rem;
   color: var(--tg-theme-primary);
   white-space: nowrap;
   letter-spacing: -0.02em;
 }
+.logo__by {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-size: 0.65em;
+  margin-left: 0;
+  color: inherit;
+  opacity: 0.9;
+  vertical-align: baseline;
+}
 .tgmenu__nav .logo__brand {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
 }
 .tgmobile__menu .nav-logo .logo__brand {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 .offCanvas__logo .logo__brand {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
 }
 .offCanvas__logo.logo--with-text .logo__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 8px;
+  align-items: baseline;
+  gap: 0;
 }
 .tgmenu__navbar-wrap {
   display: -webkit-box;
@@ -2575,6 +2585,7 @@ textarea {
   padding: 40px 0 0;
   background-color: #f8f8f8;
   background-image: none !important;
+  overflow: visible;
 }
 .banner__bg-two {
   background-size: cover;
@@ -3136,10 +3147,16 @@ textarea {
 .banner__img {
   position: relative;
 }
+.banner__img {
+  overflow: visible;
+}
 .banner__img img {
   max-width: 580px;
   width: 100%;
   object-fit: contain;
+  clip-path: inset(20% 0 0 0);
+  transform: scale(1.4) translateY(-40px);
+  transform-origin: center bottom;
 }
 @media (max-width: 1500px) {
   .banner__img {
@@ -3150,6 +3167,9 @@ textarea {
   .banner__img {
     margin-right: 0;
     text-align: center !important;
+  }
+  .banner__img img {
+    transform-origin: center center;
   }
 }
 @media (max-width: 1500px) {
@@ -4112,21 +4132,22 @@ textarea {
   border-radius: 15px;
 }
 .about__img-four img:nth-child(1) {
-  max-height: 580px;
+  max-height: 460px;
+  max-width: 90%;
   width: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: 30% 10%;
 }
 @media (max-width: 1199.98px) {
   .about__img-four img:nth-child(1) {
-    max-width: 350px;
-    max-height: 340px;
+    max-width: 290px;
+    max-height: 280px;
   }
 }
 @media (max-width: 767.98px) {
   .about__img-four img:nth-child(1) {
     max-width: 100%;
-    max-height: 300px;
+    max-height: 260px;
   }
 }
 .about__img-four img:nth-child(2) {
@@ -8920,6 +8941,7 @@ textarea {
   color: var(--tg-color-white-default);
   font-weight: 700;
   font-family: var(--tg-heading-font-family);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.15);
 }
 @media (max-width: 1500px) {
   .counter__item-two .count {
@@ -8955,6 +8977,11 @@ textarea {
   transform: translate(-50%, -50%);
   z-index: -1;
   max-width: 172px;
+}
+/* Make candy icon visible on dark blue background */
+.counter__area-bg .counter__item-shape img {
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
 }
 @media (max-width: 1199.98px) {
   .counter__item-shape img {
@@ -9176,7 +9203,7 @@ textarea {
 }
 /* Founder image - shift down to prevent face being cut off at top */
 img[src*="Screenshot_2026-02-06-02-28-53-757"] {
-  object-position: center 40%;
+  object-position: 30% 10%;
 }
 .team__item-img-shape .shape-one {
   position: absolute;
