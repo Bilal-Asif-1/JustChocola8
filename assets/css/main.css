@@ -8443,6 +8443,47 @@ textarea {
   min-height: 230px;
   object-fit: cover;
 }
+.features__banner-overlay .features__thumb-banner {
+  position: relative;
+  min-height: 280px;
+}
+.features__banner-overlay .features__thumb-banner img {
+  min-height: 280px;
+  display: block;
+}
+.features__banner-overlay .features__overlay-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 40px;
+  background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+}
+.features__banner-overlay .features__overlay-content .title,
+.features__banner-overlay .features__overlay-content strong {
+  color: var(--tg-color-white-default) !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.features__banner-overlay .features__overlay-content .title {
+  font-size: 42px;
+  margin-bottom: 5px;
+}
+.features__banner-overlay .features__overlay-content strong {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+@media (max-width: 991.98px) {
+  .features__banner-overlay .features__overlay-content .title {
+    font-size: 32px;
+  }
+  .features__banner-overlay .features__overlay-content strong {
+    font-size: 22px;
+  }
+}
 .features__icon {
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
